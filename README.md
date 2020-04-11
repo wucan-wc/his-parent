@@ -7,7 +7,7 @@
 软件架构说明
 his-parent 父模块
 his-common 公用模块			
-his-medicine 药品模块 			9006				
+his-medicine 药品模块 			9006		
 his-prescription 处方模块（新开就诊）	9005
 his-server-auth oauth2授权服务模块	9001
 his-server-resource oauth2资源服务模块	9002
