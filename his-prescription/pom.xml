@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>org.springframework.security.oauth.boot</groupId>
 			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
-			<version>2.1.8.RELEASE</version>
+			<version>${spring-security-oauth2-autoconfigure.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>cn.bdqn.his</groupId>

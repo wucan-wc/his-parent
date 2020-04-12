@@ -26,12 +26,12 @@
 		<dependency>
 		    <groupId>org.springframework.security.oauth.boot</groupId>
 		    <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-		    <version>2.1.8.RELEASE</version>
+		    <version>${spring-security-oauth2-autoconfigure.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.1.0</version>
+			<version>${mybatis-spring-boot-starter.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>1.1.13</version>
+			<version>${druid-spring-boot-starter.version}</version>
 		</dependency>
 	</dependencies>
 

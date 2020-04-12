@@ -19,8 +19,15 @@ import cn.bdqn.his.common.response.Response;
 public class DemoController {
 	@Value("${server.medicine.url}")
 	private String serverMedicineUrl;
+	@Value("${server.masterdata.url}")
+	private String serverMasterdataUrl;
+
 	@Autowired private HttpClientHelper httpClientHelper;
-	
+	@GetMapping("api/masterdata/users")
+	public Response getMasterdataUsers() {
+		return httpClientHelper.get(serverMasterdataUrl + "/api/masterdata/users");
+	}
+
 	@GetMapping("api/medicine/users")
 	public Response getUsers() {
 		return httpClientHelper.get(serverMedicineUrl + "/api/medicine/users");
