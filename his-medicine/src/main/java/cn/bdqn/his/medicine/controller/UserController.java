@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.swagger.annotations.Api;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,14 +22,22 @@ import cn.bdqn.his.common.response.ResponseEnum;
  * @author Administrator
  *
  */
+@Api
 @RestController
 @RequestMapping("/api/medicine")
 public class UserController {
 
-    @RequestMapping("/user")
+    @GetMapping("/user")
     public Authentication getUser(Authentication user){
         return user;
     }
+
+	@GetMapping("/user2")
+	public Authentication getUser2(){
+		Authentication user = SecurityContextHolder.getContext().getAuthentication();
+    	return user;
+	}
+
     @GetMapping("/users/{id}")
     public Object get(@PathVariable Integer id) {
     	Map<String, Object> user = new HashMap<String, Object>();
