@@ -72,7 +72,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter { //�
     	
 		security
 			// 开启/oauth/token_key验证端口无权限访问
-//	        .tokenKeyAccess("permitAll()")
+	        .tokenKeyAccess("permitAll()")
 //	        // 开启/oauth/check_token验证端口认证权限访问
 //	        .checkTokenAccess("isAuthenticated()")
 	        //允许第三方应用通过表单传递client_id,client_secret来登录
