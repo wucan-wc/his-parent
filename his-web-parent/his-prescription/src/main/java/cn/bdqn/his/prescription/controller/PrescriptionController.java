@@ -34,8 +34,7 @@ public class PrescriptionController {
     })
     @GetMapping("getMedicines")
     public Response getMedicines(Integer pageNum, Integer pageSize) {
-        Response response = httpClientHelper.getForResponse(serverMedicineUrl + "/api/medicines?pageNum="+pageNum+"&pageSize="+pageSize);
-        return response;
+        return httpClientHelper.getForResponse(serverMedicineUrl + "/api/medicines?pageNum="+pageNum+"&pageSize="+pageSize);
     }
     @ApiOperation(value = "调用药品模块api,分页查询药品列表",response = Response.class)
     @ApiImplicitParams({
@@ -44,22 +43,19 @@ public class PrescriptionController {
             @ApiImplicitParam(value = "药品分类ID",name = "typeId"),
             @ApiImplicitParam(value = "药品名称，模糊匹配",name = "name")
     })
-    @RequestMapping(value = "getMedicines/findBy", method = {RequestMethod.GET,RequestMethod.POST})
+    @GetMapping(value = "getMedicines/findBy")
     public Response getMedicines(Integer pageNum, Integer pageSize, Integer typeId, String name) throws Exception {
         if(pageNum == null) pageNum = 1;
         if(pageSize == null) pageSize = 5;
-        StringBuffer buffer = new StringBuffer(("?"));
-        buffer.append("pageNum="+pageNum);
-        buffer.append("&pageSize="+pageSize);
+        StringBuffer buffer = new StringBuffer("?").append("pageNum=").append(pageNum).append("&pageSize=").append(pageSize);
         if(typeId!=null) {
-            buffer.append("&typeId="+typeId);
+            buffer.append("&typeId=").append(typeId);
         }
         if(!StringUtils.isEmpty(name)) {
-            buffer.append("&name=" + URLEncoder.encode(name,"UTF-8"));
+            buffer.append("&name=").append(URLEncoder.encode(name, "UTF-8"));
         }
         log.debug("params:{}", buffer);
-        Response response = httpClientHelper.getForResponse(serverMedicineUrl + "/api/medicines/findBy"+ buffer);
-        return response;
+        return httpClientHelper.getForResponse(serverMedicineUrl + "/api/medicines/findBy"+ buffer);
     }
 
 }
