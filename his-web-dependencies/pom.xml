@@ -8,8 +8,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>his-master-data</artifactId>
+    <packaging>pom</packaging>
+    <artifactId>his-common-web-dependencies</artifactId>
+    <modules>
+        <module>his-prescription</module>
+        <module>his-medicine</module>
+        <module>his-master-data</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,6 +44,11 @@
             <version>${spring-security-oauth2-autoconfigure.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
             <groupId>cn.bdqn.his</groupId>
             <artifactId>his-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -55,14 +65,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
+
 </project>

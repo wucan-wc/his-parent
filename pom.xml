@@ -22,6 +22,7 @@
 		<pagehelper-spring-boot-starter.version>1.2.13</pagehelper-spring-boot-starter.version>
 		<druid-spring-boot-starter.version>1.1.13</druid-spring-boot-starter.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+		<pagehelper.version>5.1.8</pagehelper.version>
 	</properties>
 
 	<dependencies>
@@ -45,9 +46,7 @@
 		<module>his-common</module>
 		<module>his-server-auth</module>
 		<module>his-server-resource</module>
-		<module>his-prescription</module>
-		<module>his-medicine</module>
-		<module>his-master-data</module>
+		<module>his-web-dependencies</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

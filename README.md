@@ -8,12 +8,14 @@ httpclient调用api的例子
 #### 软件架构
 软件架构说明
 his-parent 父模块
-his-common 公用模块			
+his-common 公用模块	
+his-web-dependencies web公用模块(依赖管理)	
+    his-prescription 处方模块（新开就诊）	9005
+    his-medicine 药品模块 9006
+    his-master-data 基础数据模块 9007		
 his-server-auth oauth2授权服务模块	9001
 his-server-resource oauth2资源服务模块	9002
-his-prescription 处方模块（新开就诊）	9005
-his-medicine 药品模块 9006
-his-master-data 基础数据模块 9007
+
 
 #### 安装教程
 
