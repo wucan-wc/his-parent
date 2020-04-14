@@ -31,6 +31,7 @@ public class DemoController {
 
     /**
      * 第二步，回调地址(需要在授权服务器的oauth_client_details表中存在对应记录)
+     * 通过授权码(code)换取access_token
      * @param code
      * @return
      */

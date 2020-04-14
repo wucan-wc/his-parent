@@ -57,5 +57,17 @@ public class PrescriptionController {
         log.debug("params:{}", buffer);
         return httpClientHelper.getForResponse(serverMedicineUrl + "/api/medicines/findBy"+ buffer);
     }
-
+    
+    @GetMapping(value = "getMedicines/findByPost")
+    public Response findByPost(Integer pageNum, Integer pageSize, Integer typeId, String name) throws Exception {
+        if(pageNum == null) pageNum = 1;
+        if(pageSize == null) pageSize = 5;
+        Map<String, Object> params = new HashMap<>();
+        params.put("pageNum", pageNum);
+        params.put("pageSize", pageSize);
+        params.put("typeId", typeId);
+        params.put("name", name);
+        log.debug("params:{}", params);
+        return httpClientHelper.postForResponse(serverMedicineUrl + "/api/medicines/findBy", params);
+    }
 }
