@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/his-common/his-common.iml" filepath="$PROJECT_DIR$/his-common/his-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-web-parent/his-master-data/his-master-data.iml" filepath="$PROJECT_DIR$/his-web-parent/his-master-data/his-master-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-web-parent/his-medicine/his-medicine.iml" filepath="$PROJECT_DIR$/his-web-parent/his-medicine/his-medicine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-oauth2-login-demo/his-oauth2-login-demo.iml" filepath="$PROJECT_DIR$/his-oauth2-login-demo/his-oauth2-login-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-parent.iml" filepath="$PROJECT_DIR$/his-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-web-parent/his-prescription/his-prescription.iml" filepath="$PROJECT_DIR$/his-web-parent/his-prescription/his-prescription.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-server-auth/his-server-auth.iml" filepath="$PROJECT_DIR$/his-server-auth/his-server-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-server-resource/his-server-resource.iml" filepath="$PROJECT_DIR$/his-server-resource/his-server-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-web-parent/his-web-parent.iml" filepath="$PROJECT_DIR$/his-web-parent/his-web-parent.iml" />
+    </modules>
+  </component>
+</project>
