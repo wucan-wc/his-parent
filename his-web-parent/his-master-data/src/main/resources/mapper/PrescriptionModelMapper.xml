@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.his.masterdata.mapper.prescription.PrescriptionModelMapper">
+    <sql id="modelColumns">
+        m.`id` mid,m.`code`,m.`explain`,m.`type`,m.`jurisdiction`,m.`diagnose`,m.`createdate`,m.`doctor_id`,m.`name`
+    </sql>
+    <resultMap id="getPrescriptionModel" type="PrescriptionModel">
+        <id property="id" column="mid"/>
+        <result property="type_name" column="type_value"/>
+        <collection property="detailList" ofType="PrescriptionModelDetail">
+            <id property="id" column="did"/>
+            <result property="group" column="group"/>
+            <result property="drug_id" column="drug_id"/>
+            <result property="dosage" column="dosage"/>
+            <result property="usage" column="usage"/>
+            <result property="frequentness" column="frequentness"/>
+            <result property="day" column="day"/>
+            <result property="sum" column="sum"/>
+            <result property="price" column="price"/>
+            <result property="model_id" column="model_id"/>
+            <result property="name" column="dname"/>
+        </collection>
+    </resultMap>
+    <select id="getPrescriptionModels" resultMap="getPrescriptionModel">
+        select
+        <include refid="modelColumns"/>,d.id did,d.`group`,d.`drug_id`,d.`dosage`,d.`usage`,d.`frequentness`,d.`day`,d.`price`,d.`sum`,d.`model_id`,d.`name` dname
+         from prescription_model m,prescription_model_detail d,type t
+        where m.id=d.model_id
+            and t.group=2 and t.type_id=m.type
+        <if test="code!=null and code!=''">
+            and code like concat('%',#{code},'%')
+            or m.name like concat('%',#{code},'%')
+        </if>
+        <if test="type!=null">
+            and type=#{type}
+        </if>
+        <if test="jurisdiction!=null and jurisdiction!=''">
+            and jurisdiction=jurisdiction
+        </if>
+    </select>
+</mapper>    

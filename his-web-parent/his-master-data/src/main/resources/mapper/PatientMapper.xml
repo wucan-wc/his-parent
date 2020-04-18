@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.his.masterdata.mapper.patient.PatientMapper">
+    <select id="getPatients" resultType="Patient">
+        select p.*,t.type_value acceptTypeName from patient p,type t
+        where t.group=4 and p.accept_type=t.type_id
+    </select>
+</mapper>    

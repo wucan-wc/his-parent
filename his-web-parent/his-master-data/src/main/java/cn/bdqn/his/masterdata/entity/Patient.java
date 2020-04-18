@@ -3,22 +3,24 @@ package cn.bdqn.his.masterdata.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+
+import java.util.Date;
 
 /**
- * 医生信息表
+ * 患者信息类
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
-public class Doctor {
+@AllArgsConstructor
+public class Patient {
     private Integer id;
     private String name;
-    private Integer type;
+    private String card;
     private Integer age;
+    private Date birthday;
     private String gender;
     private String phone;
-    private String email;
+    private Integer accept_type;//患者类型id
     private String address;
+    private String acceptTypeName;//患者类型名称
 }
