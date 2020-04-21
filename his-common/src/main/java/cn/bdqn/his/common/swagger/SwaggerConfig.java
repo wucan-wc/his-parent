@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 .apiInfo(new ApiInfoBuilder()
                         .version("1.0")
                         .title(swagger2Title)
-                        .contact(new Contact("天天向上","https://gitee.com/ttxs008","john.yi@qq.com"))
+                        .contact(new Contact("wucan","https://github.com/wucan-wc","2089351896@qq.com"))
                         .build());
     }
 }
