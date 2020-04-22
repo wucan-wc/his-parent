@@ -11,6 +11,11 @@
   		<groupId>org.apache.httpcomponents</groupId>
   		<artifactId>httpclient</artifactId>
   	</dependency>
+      <dependency>
+          <groupId>com.github.pagehelper</groupId>
+          <artifactId>pagehelper</artifactId>
+          <version>${pagehelper.version}</version>
+      </dependency>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
@@ -25,6 +30,10 @@
           <groupId>io.springfox</groupId>
           <artifactId>springfox-swagger-ui</artifactId>
           <version>${springfox-swagger2.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
       </dependency>
   </dependencies>
 </project>

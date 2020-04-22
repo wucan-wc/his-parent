@@ -7,6 +7,7 @@
         `id`,`name`,`type`,`age`,`gender`,`phone`,`email`,`address`
     </sql>
     <select id="getDoctorAll" resultType="Doctor">
-        select * from doctor
+        select d.*,t.type_value typeName from doctor d,type t
+        where t.group=5 and t.type_id=d.type
     </select>
 </mapper>    

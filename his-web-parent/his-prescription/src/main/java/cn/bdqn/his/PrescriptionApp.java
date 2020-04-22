@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableOAuth2Sso
 @EnableSwagger2
-@EnableCaching
+//@EnableCaching
 public class PrescriptionApp {
 	public static void main(String[] args) {
 		SpringApplication.run(PrescriptionApp.class, args);
