@@ -108,6 +108,5 @@ public class MasterDataTest {
                 log.debug(modelDetail.toString());
             }
         }
-//        new PrescriptionModelDetail(1, 1, 1, 1, "温水吞服", "一天三次", 2, 6, 6, 1, "头孢");
     }
 }

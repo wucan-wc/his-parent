@@ -46,7 +46,6 @@
 		<module>his-common</module>
 		<module>his-server-auth</module>
 		<module>his-server-resource</module>
-		<module>his-oauth2-login-demo</module>
 		<module>his-web-parent</module>
 	</modules>
 	<dependencyManagement>

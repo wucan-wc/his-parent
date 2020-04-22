@@ -44,10 +44,10 @@ public class MedicineController {
         PageInfo<Medicine> pageInfo = new PageInfo<>(list);
         return new Response(ResponseEnum.SUCCESS).setResponseBody(pageInfo);
     }
-//    @Resource
-//    HttpClientHelper httpClientHelper;
-//    @GetMapping("test")
-//    public Response test() {
-//        return httpClientHelper.getForResponse("http://localhost:9007/api/doctor");
-//    }
+    @Resource
+    HttpClientHelper httpClientHelper;
+    @GetMapping("test")
+    public Response test() {
+        return httpClientHelper.getForResponse("http://localhost:9007/api/doctor");
+    }
 }
